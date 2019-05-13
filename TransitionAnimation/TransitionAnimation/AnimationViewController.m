@@ -8,6 +8,7 @@
 
 #import "AnimationViewController.h"
 //#import "UIViewController+Animation.h"
+#import "FinalViewController.h"
 @interface AnimationViewController ()
 @property (nonatomic,strong) UIImageView *imageView;
 @end
@@ -37,6 +38,18 @@
 - (IBAction)dismissAutoReverseAnimationAction:(UIButton *)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)pushViewControllerAction:(UIButton *)sender {
+    
+    FinalViewController *vc = [[FinalViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)presentViewControllerAction:(UIButton *)sender {
+    
+    FinalViewController *vc = [[FinalViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 

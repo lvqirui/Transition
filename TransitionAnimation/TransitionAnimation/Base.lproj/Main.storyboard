@@ -163,13 +163,31 @@
                                     <action selector="dismissAutoReverseAnimationAction:" destination="t2P-UG-IWc" eventType="touchUpInside" id="4gU-TM-4Ya"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkj-HK-70n">
+                                <rect key="frame" x="147" y="527" width="81" height="30"/>
+                                <state key="normal" title="Push控制器"/>
+                                <connections>
+                                    <action selector="pushViewControllerAction:" destination="t2P-UG-IWc" eventType="touchUpInside" id="Mi6-7M-Huu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAZ-cl-Y7l">
+                                <rect key="frame" x="138" y="576" width="99" height="30"/>
+                                <state key="normal" title="Present控制器"/>
+                                <connections>
+                                    <action selector="presentViewControllerAction:" destination="t2P-UG-IWc" eventType="touchUpInside" id="Mbz-Yb-ytD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.57009694502801123" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Wkj-HK-70n" firstAttribute="centerX" secondItem="eqB-jg-7BX" secondAttribute="centerX" id="OPb-KV-SXG"/>
+                            <constraint firstItem="zAZ-cl-Y7l" firstAttribute="top" secondItem="Wkj-HK-70n" secondAttribute="bottom" constant="19" id="TX1-pe-3uf"/>
                             <constraint firstItem="SKn-Am-8nr" firstAttribute="top" secondItem="XAL-sJ-ZPV" secondAttribute="bottom" constant="70" id="aBL-c2-RxD"/>
                             <constraint firstItem="SKn-Am-8nr" firstAttribute="centerX" secondItem="eqB-jg-7BX" secondAttribute="centerX" id="fWE-Ot-vKy"/>
                             <constraint firstItem="XAL-sJ-ZPV" firstAttribute="centerY" secondItem="eqB-jg-7BX" secondAttribute="centerY" id="fea-5c-qe6"/>
+                            <constraint firstItem="zAZ-cl-Y7l" firstAttribute="centerX" secondItem="eqB-jg-7BX" secondAttribute="centerX" id="fzz-C5-JLU"/>
                             <constraint firstItem="XAL-sJ-ZPV" firstAttribute="centerX" secondItem="eqB-jg-7BX" secondAttribute="centerX" id="oF1-lG-V2f"/>
+                            <constraint firstItem="Wkj-HK-70n" firstAttribute="top" secondItem="SKn-Am-8nr" secondAttribute="bottom" constant="27.5" id="p1P-SJ-Ist"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TNh-Mx-FyX"/>
                     </view>

@@ -28,6 +28,7 @@
 		9CB9FD3F2282B009006A5830 /* CheckerboardAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9FD3E2282B009006A5830 /* CheckerboardAnimation.m */; };
 		9CB9FD892283C5FE006A5830 /* PushBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9FD882283C5FE006A5830 /* PushBaseAnimation.m */; };
 		9CB9FD8C2283C615006A5830 /* PresentBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9FD8B2283C615006A5830 /* PresentBaseAnimation.m */; };
+		9CB9FDE5228953D4006A5830 /* FinalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB9FDE4228953D4006A5830 /* FinalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		9CB9FD882283C5FE006A5830 /* PushBaseAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushBaseAnimation.m; sourceTree = "<group>"; };
 		9CB9FD8A2283C615006A5830 /* PresentBaseAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentBaseAnimation.h; sourceTree = "<group>"; };
 		9CB9FD8B2283C615006A5830 /* PresentBaseAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentBaseAnimation.m; sourceTree = "<group>"; };
+		9CB9FDE3228953D4006A5830 /* FinalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinalViewController.h; sourceTree = "<group>"; };
+		9CB9FDE4228953D4006A5830 /* FinalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinalViewController.m; sourceTree = "<group>"; };
 		B7D9B9A5FE85D0A1C85BDB85 /* Pods-TransitionAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitionAnimation.release.xcconfig"; path = "Target Support Files/Pods-TransitionAnimation/Pods-TransitionAnimation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +163,8 @@
 				9C9CC27E22703A1B0069C514 /* ViewController.m */,
 				9C9CC2AF22704C1E0069C514 /* AnimationViewController.h */,
 				9C9CC2B022704C1E0069C514 /* AnimationViewController.m */,
+				9CB9FDE3228953D4006A5830 /* FinalViewController.h */,
+				9CB9FDE4228953D4006A5830 /* FinalViewController.m */,
 				9C9CC28022703A1B0069C514 /* Main.storyboard */,
 				9C9CC28322703A2F0069C514 /* Assets.xcassets */,
 				9C9CC28522703A2F0069C514 /* LaunchScreen.storyboard */,
@@ -416,6 +421,7 @@
 				9CB9FD3922801ABD006A5830 /* UIViewController+Animation.m in Sources */,
 				9C9CC28A22703A2F0069C514 /* main.m in Sources */,
 				9C9CC27C22703A1B0069C514 /* AppDelegate.m in Sources */,
+				9CB9FDE5228953D4006A5830 /* FinalViewController.m in Sources */,
 				9CB9FD3722801ABD006A5830 /* SpreadAnimation.m in Sources */,
 				9C9CC2B122704C1E0069C514 /* AnimationViewController.m in Sources */,
 				9CB9FD3822801ABD006A5830 /* TransitionAnimationManager.m in Sources */,
