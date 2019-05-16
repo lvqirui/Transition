@@ -9,7 +9,7 @@
 #ifndef TransitionType_h
 #define TransitionType_h
 
-#define AnimationDuration 0.3
+#define AnimationDuration 0.5
 
 //push动画类型
 typedef enum : NSUInteger {

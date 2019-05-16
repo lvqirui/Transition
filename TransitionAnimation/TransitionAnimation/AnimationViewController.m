@@ -18,14 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 200, 300, 50)];
-    textField.borderStyle = UITextBorderStyleRoundedRect;
-    textField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
-    textField.leftView.backgroundColor = [UIColor lightGrayColor];
-    textField.leftViewMode = UITextFieldViewModeUnlessEditing;
-    textField.text = @"我是一个text";
-    [self.view addSubview:textField];
+    
 }
 
 - (void)viewDidLayoutSubviews
