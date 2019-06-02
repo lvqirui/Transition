@@ -10,6 +10,8 @@
 #import "TransitionAnimationType.h"
 #import "AnimationViewController.h"
 #import "UIViewController+Animation.h"
+#import "AAPLCustomPresentationController.h"
+#import "AAPLCustomPresentationSecondViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -23,10 +25,7 @@
 
 static NSArray *pushArray = nil;
 static NSArray *presentArray = nil;
-
-static NSMutableArray *totalArray = nil;
-
-static NSDictionary *categoryDic = nil;
+static NSArray *customPresentArry = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -78,9 +77,7 @@ static NSDictionary *categoryDic = nil;
                     @"LQR_TransitionPresentTypeCrossDissolve",
                     @"LQR_TransitionPresentTypeCheckerboard"];
 
-    
-    
-    
+    customPresentArry = @[@"LQR_CustomPresentTransitionFirst"];
     
 }
 
@@ -90,6 +87,21 @@ static NSDictionary *categoryDic = nil;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (indexPath.section == 2) {
+        AAPLCustomPresentationSecondViewController *secondViewController = [[AAPLCustomPresentationSecondViewController alloc] init];
+        
+        AAPLCustomPresentationController *presentationController NS_VALID_UNTIL_END_OF_SCOPE;
+        
+        presentationController = [[AAPLCustomPresentationController alloc] initWithPresentedViewController:secondViewController presentingViewController:self];
+        
+        secondViewController.transitioningDelegate = presentationController;
+        
+        [self presentViewController:secondViewController animated:YES completion:NULL];
+        
+        return ;
+    }
+    
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     AnimationViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"AnimationViewController"];
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"是否使用动画?" message:nil preferredStyle:UIAlertControllerStyleAlert];
@@ -132,7 +144,7 @@ static NSDictionary *categoryDic = nil;
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -143,6 +155,9 @@ static NSDictionary *categoryDic = nil;
             break;
         case 1:
             return LQR_TransitionPresentTypeCheckerboard;
+            break;
+        case 2:
+            return LQR_CustomPresentTransitionFirst;
             break;
         default:
             return 0;
@@ -164,6 +179,9 @@ static NSDictionary *categoryDic = nil;
         case 1:
             cell.textLabel.text = presentArray[indexPath.row];
             break;
+        case 2:
+            cell.textLabel.text = customPresentArry[indexPath.row];
+            break;
         default:
             break;
     }
@@ -184,6 +202,9 @@ static NSDictionary *categoryDic = nil;
             break;
         case 1:
             label.text = @"PresentAnimation";
+            break;
+        case 2:
+            label.text = @"CustomPresentViewController";
             break;
         default:
             break;

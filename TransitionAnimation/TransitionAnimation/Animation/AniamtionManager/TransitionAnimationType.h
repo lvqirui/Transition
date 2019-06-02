@@ -69,6 +69,15 @@ typedef enum : NSUInteger {
 } LQR_PresentAnimationOptions;
 
 
+
+//自定义控制器动画
+typedef enum : NSUInteger {
+    LQR_CustomPresentTransitionTypeNone = 0,
+    LQR_CustomPresentTransitionFirst = 1,
+
+} LQR_CustomPresentViewController;
+
+
 #endif /* TransitionType_h */
 
 
